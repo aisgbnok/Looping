@@ -14,14 +14,12 @@ def find_in_range(start, end, x):
     :param x: Number to find.
     :return: True if x is in the range, False otherwise.
     """
-    result = start <= x <= end
-
     if start > end:
-        return not result
+        return not start > x > end
     else:
-        return result
+        return start <= x <= end
 
-    # return not start <= x <= end if start > end else start <= x <= end
+    # return not start > x > end if start > end else start <= x <= end
 
 
 # I don't think this one works.
